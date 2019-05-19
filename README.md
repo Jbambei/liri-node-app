@@ -22,9 +22,13 @@ To install, run npm install within the liri directory.
 
 Give liri one of these four commands
 ` spotify-this-song `
+
 ` concert-this `
+
 ` movie-this `
+
 ` do-what-it-says `
+
 
 and a appropriate input.  
 
