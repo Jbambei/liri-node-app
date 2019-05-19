@@ -76,6 +76,25 @@ function movie(stuffInput) {
             console.log(`Release year: ${response.data.Year}`)
             console.log(`IMDB Rating: ${response.data.imbdRating}`)
             console.log(`Rotton Tomatoes Rating: ${response.data.Ratings[1].Value}`)
-            console.log(`Origin Country: `)
+            console.log(`Origin Country: ${response.data.Country}`)
+            console.log(`Language: ${response.data.Language}`)
+            console.log(`Plot: ${response.data.Plot}`)
+            console.log(`Cast: ${response.data.Actors}`)
         })
+        .catch(function(err) {
+            console.log("Error:" + err)
+        })
+}
+
+//read the text file then run liri based on the contents. Assumes the format of:   command,stuffinput and that there is only one line in at a time
+function doIt() {
+    fs.readFile("random.txt", "utf8", function(error, data) {
+        if (error) {
+          console.log(error);
+        }  
+    var textData = data.split(",")
+        commandInput = textData[0]
+        stuffInput = textData[1]
+        liri(commandInput, stuffInput)
+    })
 }
