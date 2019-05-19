@@ -62,7 +62,23 @@ function spotifySong(stuffInput) {
 
 //Searches Bands in Town Artist Events API for an artist then renders the venue name, location, and time of the event.
 
-//placeholder
+function concert(stuffInput) {
+
+    var concertURL = "https://rest.bandsintown.com/artists/" + stuffInput + "/events?app_id=codingbootcamp"
+        axios
+            .get(concertURL)
+            .then(function (response) {
+               var concertData = [
+                   "Venue Name: "+response.data[0].venue.name,
+                   "Venue Location: "+response.data[0].venue.city + "," +response.data[0].venue.region,
+                   "Date: " + moment(response.data[0].datetime).format('L')
+               ].join("\n\n");
+               console.log(concertData);
+            })
+            .catch(function(err) {
+                console.log("Error:" + err);
+              })
+    }
 
 
 //Uses axios to query OMBD API for movie data, then renders data
