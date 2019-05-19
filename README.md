@@ -21,6 +21,7 @@ To install, run npm install within the liri directory.
 ## How to use
 
 Give liri one of these four commands
+
 ` spotify-this-song `
 
 ` concert-this `
@@ -31,6 +32,7 @@ Give liri one of these four commands
 
 
 and a appropriate input.  
+
 
 Example: spotify-this-song cinnamon
 
