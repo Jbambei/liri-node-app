@@ -29,15 +29,32 @@ function liri () {
             spotifySong(stuffInput)
             break
 
+        case "song":
+            //console.log("works")
+            spotifySong(stuffInput)
+            break
+
         case "concert-this":
             concert(stuffInput)
+            break
+
+        case "concert":
+        concert(stuffInput)
             break
         
         case "movie-this":
             movie(stuffInput)
             break
+
+        case "movie":
+        movie(stuffInput)
+        break    
         
         case "do-what-it-says":
+            doIt()
+            break
+
+        case "doit":
             doIt()
             break
     }
