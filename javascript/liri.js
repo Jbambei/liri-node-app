@@ -85,6 +85,7 @@ function concert(stuffInput) {
         axios
             .get(concertURL)
             .then(function (response) {
+                console.log("---------------Concert Info-----------")
                 console.log(`Venue Name: ${response.data[0].venue.name}`)
                 console.log(`Venue Location: ${response.data[0].venue.city}, ${response.data[0].venue.region}`)
                 console.log("Data: " + moment(response.data[0].datetime).format('L'))
