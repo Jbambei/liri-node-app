@@ -47,7 +47,7 @@ function liri () {
             break
 
         case "movie":
-        movie(stuffInput)
+            movie(stuffInput)
         break    
         
         case "do-what-it-says":
@@ -85,12 +85,9 @@ function concert(stuffInput) {
         axios
             .get(concertURL)
             .then(function (response) {
-               var concertData = [
-                   "Venue Name: "+response.data[0].venue.name,
-                   "Venue Location: "+response.data[0].venue.city + "," +response.data[0].venue.region,
-                   "Date: " + moment(response.data[0].datetime).format('L')
-               ].join("\n\n");
-               console.log(concertData);
+                console.log(`Venue Name: ${response.data[0].venue.name}`)
+                console.log(`Venue Location: ${response.data[0].venue.city}, ${response.data[0].venue.region}`)
+                console.log("Data: " + moment(response.data[0].datetime).format('L'))
             })
             .catch(function(err) {
                 console.log("Error:" + err);
