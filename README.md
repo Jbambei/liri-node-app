@@ -18,13 +18,25 @@ You will need to supply your own .env file with your own SPOTIFY SECRET and SPOT
 
 To install, run npm install within the liri directory.
 
+## How to use
+
+Give liri one of these four commands
+` spotify-this-song `
+` concert-this `
+` movie-this `
+` do-what-it-says `
+
+and a appropriate input.  
+
+Example: spotify-this-song cinnamon
+
 
 ## Built With
 
--axios
--dotenv
--moment
--node-spotify-api
--OMDB API
--Bands In Town API
+- axios
+- dotenv
+- moment
+- node-spotify-api
+- OMDB API
+- Bands In Town API
 
