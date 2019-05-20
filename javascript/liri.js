@@ -12,7 +12,7 @@ var args = process.argv
 var commandInput = args[2]
 var stuffInput = args[3] //slice?
 
-
+console.log(stuffInput)
 //console.log(commandInput + "  " + stuffInput)
 
 
@@ -20,40 +20,35 @@ var stuffInput = args[3] //slice?
 liri()
 function liri () {
     switch(commandInput) {
+
         default:
             console.log("Spelling error on command")
             break;
 
         case "spotify-this-song":
-            //console.log("works")
-            spotifySong(stuffInput)
-            break
-
         case "song":
-            //console.log("works")
+            if (commandInput) {
             spotifySong(stuffInput)
-            break
+            } //else {
+              //  spotifySong("The-sign")
+           // } currently doesn't work
+                break
 
         case "concert-this":
-            concert(stuffInput)
-            break
-
         case "concert":
-        concert(stuffInput)
+            concert(stuffInput)
             break
         
         case "movie-this":
-            movie(stuffInput)
-            break
-
         case "movie":
-            movie(stuffInput)
-        break    
+            if (stuffInput) {
+                movie(stuffInput)
+            } else {
+                movie("Mr.Nobody")
+            }
+            break 
         
         case "do-what-it-says":
-            doIt()
-            break
-
         case "doit":
             doIt()
             break
@@ -61,7 +56,7 @@ function liri () {
 }
 
 //FUNCTIONS
-
+console.log(stuffInput)
 
 // takes song input then renders information about it
 function spotifySong(stuffInput) {
