@@ -22,16 +22,18 @@ To install, run npm install within the liri directory.
 
 Give liri one of these four commands
 
-` spotify-this-song `
+` spotify-this-song ` or `song`
 
-` concert-this `
+` concert-this ` or `concert`
 
-` movie-this `
+` movie-this ` or `movie`
 
-` do-what-it-says `
+` do-what-it-says ` or `doit`
 
 
-and a appropriate input.  
+and a appropriate input. For inputs that require a space, such as searching for the movie "The Incredibles" input with a dash. To search for The Incredibles, the input is 
+
+`node liri.js movie the-incredibles
 
 
 Example: spotify-this-song cinnamon
