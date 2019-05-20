@@ -33,10 +33,8 @@ Give liri one of these four commands
 
 and a appropriate input. For inputs that require a space, such as searching for the movie "The Incredibles" input with a dash. To search for The Incredibles, the input is 
 
-`node liri.js movie the-incredibles
+`node liri.js movie the-incredibles`
 
-
-Example: spotify-this-song cinnamon
 
 
 ## Built With
